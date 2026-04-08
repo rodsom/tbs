@@ -1,6 +1,26 @@
+# dependencies
 node_modules
+
+# build output
 dist
+.dist
 .astro
-uploads
-data.db
+
+# cloudflare
 .wrangler
+
+# database / uploads (local only)
+data.db
+uploads
+
+# env
+.env
+.env.*
+
+# logs
+npm-debug.log*
+pnpm-debug.log*
+
+# system
+.DS_Store
+Thumbs.db
