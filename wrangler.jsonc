@@ -1,6 +1,8 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "my-emdash-site",
+	"name": "tbs",
+  	"workers_dev": true,
+  	"preview_urls": true,
 	"main": "./src/worker.ts",
 	"compatibility_date": "2026-03-29",
 	"compatibility_flags": [
@@ -9,22 +11,28 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "my-emdash-site",
-			// Run `wrangler d1 create my-emdash-site` and paste the ID here
-		},
+			"database_name": "tbs-db",
+			"database_id": "001a4ae8-8c41-43c0-925d-f8218f8faf78"
+		}
 	],
 	"r2_buckets": [
 		{
 			"binding": "MEDIA",
-			"bucket_name": "my-emdash-media",
-		},
+			"bucket_name": "tbs-bucket"
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "SESSION",
+			"id": "462580fca5e3424187e05686e480910d"
+		}
 	],
 	"observability": {
-		"enabled": true,
+		"enabled": true
 	},
 	"worker_loaders": [
 		{
-			"binding": "LOADER",
-		},
-	],
+			"binding": "LOADER"
+		}
+	]
 }
